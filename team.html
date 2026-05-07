@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title data-i18n="brand.title">ネズミ諜報部隊</title>
+    <link rel="icon" type="image/png" href="nezumi_icon.png" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="crop-marks" aria-hidden="true"><span></span></div>
+
+    <!-- AUTH GATE -->
+    <div class="auth-gate" id="auth-gate" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+      <div class="auth-card">
+        <div class="panel-label" data-i18n="auth.label">&gt; SECURE_ACCESS.exe</div>
+        <h2 class="auth-title" id="auth-title" data-i18n="auth.title">ACCESS CONTROL</h2>
+        <p class="auth-prompt" data-i18n="auth.prompt">アクセスコードを入力してください</p>
+        <form class="auth-form" data-auth-form autocomplete="off">
+          <input
+            class="auth-input"
+            type="password"
+            data-auth-input
+            spellcheck="false"
+            autocapitalize="off"
+            autocorrect="off"
+            autocomplete="off"
+            aria-label="access code"
+          />
+          <button class="auth-submit" type="submit" data-i18n="auth.submit">[ AUTHORIZE ]</button>
+        </form>
+        <div class="auth-status" data-auth-status></div>
+        <div class="auth-hint" data-i18n="auth.hint">※ コードは隊長から伝達されます</div>
+      </div>
+    </div>
+
+    <!-- STAGE -->
+    <div class="page stage" id="stage" aria-hidden="true">
+      <header class="topbar">
+        <div class="brand">
+          <img class="brand-logo" src="nezumi_icon.png" alt="" />
+          <div class="brand-text">
+            <span class="brand-title" data-i18n="brand.title">ネズミ諜報部隊</span>
+            <span class="brand-tag" data-i18n="brand.tag">OPERATION: NEZUMI</span>
+          </div>
+        </div>
+        <nav class="nav">
+          <a class="nav-link" href="index.html" data-i18n="nav.home">[ HOME ]</a>
+          <a class="nav-link active" href="team.html" data-i18n="nav.team">[ DOSSIER ]</a>
+          <span class="nav-sep">|</span>
+          <button class="lang-btn" data-lang-btn="ja" data-i18n="lang.ja">[ JA ]</button>
+          <button class="lang-btn" data-lang-btn="ko" data-i18n="lang.ko">[ KO ]</button>
+        </nav>
+      </header>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span class="ticker-text" data-i18n="ticker.text">
+            // CLASSIFIED // OPERATION: NEZUMI // CLEARANCE: LV-7 //
+          </span>
+        </div>
+      </div>
+
+      <main class="content">
+        <div class="panel-label" data-i18n="team.label.dossier">&gt; AGENT_DOSSIER.dat</div>
+        <h1 class="headline" data-typing data-i18n="team.headline">AGENT DOSSIER</h1>
+        <div class="team-subhead" data-i18n="team.subhead">機密要員リスト</div>
+
+        <img
+          class="team-banner"
+          src="nezumi_team_banner.png"
+          data-i18n-alt="team.banner.alt"
+          alt="ネズミスパイ団 バナー"
+          onerror="this.style.display='none'"
+        />
+
+        <div class="team-grid">
+          <!-- #001 OKA -->
+          <article class="agent-card">
+            <div class="agent-card-head">
+              <span>&gt; AGENT_#001.dat</span>
+              <span class="agent-status">
+                <span class="dot"></span>
+                <span data-i18n="team.label.status">ACTIVE</span>
+              </span>
+            </div>
+            <div class="agent-id">
+              <img
+                class="agent-avatar"
+                src="assets/members/oka.png"
+                alt=""
+                onerror="this.onerror=null;this.src='nezumi_icon.png'"
+              />
+              <div class="agent-id-text">
+                <div class="agent-name" data-i18n="member.oka.name">おかさん</div>
+                <div class="agent-alias">
+                  <span data-i18n="team.label.alias">ALIAS</span>:
+                  <span data-i18n="member.oka.alias">大将ずみ</span>
+                </div>
+              </div>
+            </div>
+            <div class="agent-codename">
+              <span class="label" data-i18n="team.label.codename">CODENAME</span>
+              <span class="value" data-i18n="member.oka.codename">絶対カリスマ・リーダー</span>
+            </div>
+            <div class="agent-section strength">
+              <span class="sec-label" data-i18n="team.section.strength">STRENGTH / 伝説の要員</span>
+              <div class="sec-body" data-i18n="member.oka.strength"></div>
+            </div>
+            <div class="agent-section anomaly">
+              <span class="sec-label" data-i18n="team.section.anomaly">ANOMALY / 致命的欠陥</span>
+              <div class="sec-body">
+                <span class="anomaly-name" data-i18n="member.oka.anomaly.name"></span>
+                <span data-i18n="member.oka.anomaly.desc"></span>
+              </div>
+            </div>
+            <div class="agent-foot">
+              <span><span data-i18n="team.label.clearance">CLEARANCE</span>: LV-9</span>
+              <span>#001</span>
+            </div>
+            <div class="agent-watermark" data-i18n="team.watermark">機密</div>
+          </article>
+
+          <!-- #002 YUKINA -->
+          <article class="agent-card">
+            <div class="agent-card-head">
+              <span>&gt; AGENT_#002.dat</span>
+              <span class="agent-status">
+                <span class="dot"></span>
+                <span data-i18n="team.label.status">ACTIVE</span>
+              </span>
+            </div>
+            <div class="agent-id">
+              <img
+                class="agent-avatar"
+                src="assets/members/yukina.png"
+                alt=""
+                onerror="this.onerror=null;this.src='nezumi_icon.png'"
+              />
+              <div class="agent-id-text">
+                <div class="agent-name" data-i18n="member.yukina.name">ユキナ</div>
+                <div class="agent-alias">
+                  <span data-i18n="team.label.alias">ALIAS</span>:
+                  <span data-i18n="member.yukina.alias">副隊長ずみ + シベリアンネコ</span>
+                </div>
+              </div>
+            </div>
+            <div class="agent-codename">
+              <span class="label" data-i18n="team.label.codename">CODENAME</span>
+              <span class="value" data-i18n="member.yukina.codename"></span>
+            </div>
+            <div class="agent-section strength">
+              <span class="sec-label" data-i18n="team.section.strength"></span>
+              <div class="sec-body" data-i18n="member.yukina.strength"></div>
+            </div>
+            <div class="agent-section anomaly">
+              <span class="sec-label" data-i18n="team.section.anomaly"></span>
+              <div class="sec-body">
+                <span class="anomaly-name" data-i18n="member.yukina.anomaly.name"></span>
+                <span data-i18n="member.yukina.anomaly.desc"></span>
+              </div>
+            </div>
+            <div class="agent-foot">
+              <span><span data-i18n="team.label.clearance">CLEARANCE</span>: LV-8</span>
+              <span>#002</span>
+            </div>
+            <div class="agent-watermark" data-i18n="team.watermark">機密</div>
+          </article>
+
+          <!-- #003 YUKON -->
+          <article class="agent-card">
+            <div class="agent-card-head">
+              <span>&gt; AGENT_#003.dat</span>
+              <span class="agent-status">
+                <span class="dot"></span>
+                <span data-i18n="team.label.status">ACTIVE</span>
+              </span>
+            </div>
+            <div class="agent-id">
+              <img
+                class="agent-avatar"
+                src="assets/members/yukon.png"
+                alt=""
+                onerror="this.onerror=null;this.src='nezumi_icon.png'"
+              />
+              <div class="agent-id-text">
+                <div class="agent-name" data-i18n="member.yukon.name">ユコン</div>
+                <div class="agent-alias">
+                  <span data-i18n="team.label.alias">ALIAS</span>:
+                  <span data-i18n="member.yukon.alias"></span>
+                </div>
+              </div>
+            </div>
+            <div class="agent-codename">
+              <span class="label" data-i18n="team.label.codename">CODENAME</span>
+              <span class="value" data-i18n="member.yukon.codename"></span>
+            </div>
+            <div class="agent-section strength">
+              <span class="sec-label" data-i18n="team.section.strength"></span>
+              <div class="sec-body" data-i18n="member.yukon.strength"></div>
+            </div>
+            <div class="agent-section anomaly">
+              <span class="sec-label" data-i18n="team.section.anomaly"></span>
+              <div class="sec-body">
+                <span class="anomaly-name" data-i18n="member.yukon.anomaly.name"></span>
+                <span data-i18n="member.yukon.anomaly.desc"></span>
+              </div>
+            </div>
+            <div class="agent-foot">
+              <span><span data-i18n="team.label.clearance">CLEARANCE</span>: LV-7</span>
+              <span>#003</span>
+            </div>
+            <div class="agent-watermark" data-i18n="team.watermark">機密</div>
+          </article>
+
+          <!-- #004 MOE -->
+          <article class="agent-card">
+            <div class="agent-card-head">
+              <span>&gt; AGENT_#004.dat</span>
+              <span class="agent-status">
+                <span class="dot"></span>
+                <span data-i18n="team.label.status">ACTIVE</span>
+              </span>
+            </div>
+            <div class="agent-id">
+              <img
+                class="agent-avatar"
+                src="assets/members/moe.png"
+                alt=""
+                onerror="this.onerror=null;this.src='nezumi_icon.png'"
+              />
+              <div class="agent-id-text">
+                <div class="agent-name" data-i18n="member.moe.name">モエ</div>
+                <div class="agent-alias">
+                  <span data-i18n="team.label.alias">ALIAS</span>:
+                  <span data-i18n="member.moe.alias"></span>
+                </div>
+              </div>
+            </div>
+            <div class="agent-codename">
+              <span class="label" data-i18n="team.label.codename">CODENAME</span>
+              <span class="value" data-i18n="member.moe.codename"></span>
+            </div>
+            <div class="agent-section strength">
+              <span class="sec-label" data-i18n="team.section.strength"></span>
+              <div class="sec-body" data-i18n="member.moe.strength"></div>
+            </div>
+            <div class="agent-section anomaly">
+              <span class="sec-label" data-i18n="team.section.anomaly"></span>
+              <div class="sec-body">
+                <span class="anomaly-name" data-i18n="member.moe.anomaly.name"></span>
+                <span data-i18n="member.moe.anomaly.desc"></span>
+              </div>
+            </div>
+            <div class="agent-foot">
+              <span><span data-i18n="team.label.clearance">CLEARANCE</span>: LV-7</span>
+              <span>#004</span>
+            </div>
+            <div class="agent-watermark" data-i18n="team.watermark">機密</div>
+          </article>
+
+          <!-- #005 RYUKI -->
+          <article class="agent-card">
+            <div class="agent-card-head">
+              <span>&gt; AGENT_#005.dat</span>
+              <span class="agent-status">
+                <span class="dot"></span>
+                <span data-i18n="team.label.status">ACTIVE</span>
+              </span>
+            </div>
+            <div class="agent-id">
+              <img
+                class="agent-avatar"
+                src="assets/members/ryuki.png"
+                alt=""
+                onerror="this.onerror=null;this.src='nezumi_icon.png'"
+              />
+              <div class="agent-id-text">
+                <div class="agent-name" data-i18n="member.ryuki.name">リュウキ</div>
+                <div class="agent-alias">
+                  <span data-i18n="team.label.alias">ALIAS</span>:
+                  <span data-i18n="member.ryuki.alias"></span>
+                </div>
+              </div>
+            </div>
+            <div class="agent-codename">
+              <span class="label" data-i18n="team.label.codename">CODENAME</span>
+              <span class="value" data-i18n="member.ryuki.codename"></span>
+            </div>
+            <div class="agent-section strength">
+              <span class="sec-label" data-i18n="team.section.strength"></span>
+              <div class="sec-body" data-i18n="member.ryuki.strength"></div>
+            </div>
+            <div class="agent-section anomaly">
+              <span class="sec-label" data-i18n="team.section.anomaly"></span>
+              <div class="sec-body">
+                <span class="anomaly-name" data-i18n="member.ryuki.anomaly.name"></span>
+                <span data-i18n="member.ryuki.anomaly.desc"></span>
+              </div>
+            </div>
+            <div class="agent-foot">
+              <span><span data-i18n="team.label.clearance">CLEARANCE</span>: LV-6</span>
+              <span>#005</span>
+            </div>
+            <div class="agent-watermark" data-i18n="team.watermark">機密</div>
+          </article>
+
+          <!-- #006 INMUK -->
+          <article class="agent-card">
+            <div class="agent-card-head">
+              <span>&gt; AGENT_#006.dat</span>
+              <span class="agent-status">
+                <span class="dot"></span>
+                <span data-i18n="team.label.status">ACTIVE</span>
+              </span>
+            </div>
+            <div class="agent-id">
+              <img
+                class="agent-avatar"
+                src="assets/members/inmuk.png"
+                alt=""
+                onerror="this.onerror=null;this.src='nezumi_icon.png'"
+              />
+              <div class="agent-id-text">
+                <div class="agent-name" data-i18n="member.inmuk.name">インムク</div>
+                <div class="agent-alias">
+                  <span data-i18n="team.label.alias">ALIAS</span>:
+                  <span data-i18n="member.inmuk.alias"></span>
+                </div>
+              </div>
+            </div>
+            <div class="agent-codename">
+              <span class="label" data-i18n="team.label.codename">CODENAME</span>
+              <span class="value" data-i18n="member.inmuk.codename"></span>
+            </div>
+            <div class="agent-section strength">
+              <span class="sec-label" data-i18n="team.section.strength"></span>
+              <div class="sec-body" data-i18n="member.inmuk.strength"></div>
+            </div>
+            <div class="agent-section anomaly">
+              <span class="sec-label" data-i18n="team.section.anomaly"></span>
+              <div class="sec-body">
+                <span class="anomaly-name" data-i18n="member.inmuk.anomaly.name"></span>
+                <span data-i18n="member.inmuk.anomaly.desc"></span>
+              </div>
+            </div>
+            <div class="agent-foot">
+              <span><span data-i18n="team.label.clearance">CLEARANCE</span>: LV-8</span>
+              <span>#006</span>
+            </div>
+            <div class="agent-watermark" data-i18n="team.watermark">機密</div>
+          </article>
+        </div>
+      </main>
+
+      <footer class="footer" data-i18n="footer.text">
+        © NEZUMI INTELLIGENCE — EYES ONLY
+      </footer>
+    </div>
+
+    <script src="assets/config.js"></script>
+    <script src="assets/i18n.js"></script>
+    <script src="assets/auth.js"></script>
+    <script src="assets/main.js"></script>
+  </body>
+</html>

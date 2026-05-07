@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title data-i18n="brand.title">ネズミ諜報部隊</title>
+    <link rel="icon" type="image/png" href="nezumi_icon.png" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="crop-marks" aria-hidden="true"><span></span></div>
+
+    <!-- AUTH GATE -->
+    <div class="auth-gate" id="auth-gate" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+      <div class="auth-card">
+        <div class="panel-label" data-i18n="auth.label">&gt; SECURE_ACCESS.exe</div>
+        <h2 class="auth-title" id="auth-title" data-i18n="auth.title">ACCESS CONTROL</h2>
+        <p class="auth-prompt" data-i18n="auth.prompt">アクセスコードを入力してください</p>
+        <form class="auth-form" data-auth-form autocomplete="off">
+          <input
+            class="auth-input"
+            type="password"
+            data-auth-input
+            spellcheck="false"
+            autocapitalize="off"
+            autocorrect="off"
+            autocomplete="off"
+            aria-label="access code"
+          />
+          <button class="auth-submit" type="submit" data-i18n="auth.submit">[ AUTHORIZE ]</button>
+        </form>
+        <div class="auth-status" data-auth-status></div>
+        <div class="auth-hint" data-i18n="auth.hint">※ コードは隊長から伝達されます</div>
+      </div>
+    </div>
+
+    <!-- STAGE -->
+    <div class="page stage" id="stage" aria-hidden="true">
+      <header class="topbar">
+        <div class="brand">
+          <img class="brand-logo" src="nezumi_icon.png" alt="" />
+          <div class="brand-text">
+            <span class="brand-title" data-i18n="brand.title">ネズミ諜報部隊</span>
+            <span class="brand-tag" data-i18n="brand.tag">OPERATION: NEZUMI</span>
+          </div>
+        </div>
+        <nav class="nav">
+          <a class="nav-link active" href="index.html" data-i18n="nav.home">[ HOME ]</a>
+          <a class="nav-link" href="team.html" data-i18n="nav.team">[ DOSSIER ]</a>
+          <span class="nav-sep">|</span>
+          <button class="lang-btn" data-lang-btn="ja" data-i18n="lang.ja">[ JA ]</button>
+          <button class="lang-btn" data-lang-btn="ko" data-i18n="lang.ko">[ KO ]</button>
+        </nav>
+      </header>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span class="ticker-text" data-i18n="ticker.text">
+            // CLASSIFIED // OPERATION: NEZUMI // CLEARANCE: LV-7 //
+          </span>
+        </div>
+      </div>
+
+      <main class="content">
+        <div class="panel-label" data-i18n="home.label.countdown">&gt; COUNTDOWN.exe</div>
+        <h1 class="headline" data-typing data-i18n="home.headline">次の任務まで</h1>
+
+        <section class="countdown-wrap">
+          <div class="countdown-dday" id="dday-label" data-i18n="home.tbd">日時機密</div>
+          <div class="timer" role="group" aria-label="countdown">
+            <div class="timer-seg">
+              <div class="timer-num" id="seg-days">--</div>
+              <span class="timer-label" data-i18n="home.label.days">DAYS</span>
+            </div>
+            <div class="timer-seg">
+              <div class="timer-num" id="seg-hrs">--</div>
+              <span class="timer-label" data-i18n="home.label.hrs">HRS</span>
+            </div>
+            <div class="timer-seg">
+              <div class="timer-num" id="seg-min">--</div>
+              <span class="timer-label" data-i18n="home.label.min">MIN</span>
+            </div>
+            <div class="timer-seg">
+              <div class="timer-num" id="seg-sec">--</div>
+              <span class="timer-label" data-i18n="home.label.sec">SEC</span>
+            </div>
+          </div>
+
+          <div class="complete-banner hidden" id="complete-banner" data-i18n="home.complete">
+            MISSION COMPLETE
+          </div>
+
+          <div class="countdown-meta">
+            <span data-i18n="home.operation">作戦コード</span>:
+            <strong id="operation-code">OP-NEZUMI</strong>
+            <span class="sep">·</span>
+            <span data-i18n="home.target">目標日時</span>:
+            <strong id="target-date" data-i18n="home.target.classified">CLASSIFIED</strong>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer" data-i18n="footer.text">
+        © NEZUMI INTELLIGENCE — EYES ONLY
+      </footer>
+    </div>
+
+    <script src="assets/config.js"></script>
+    <script src="assets/i18n.js"></script>
+    <script src="assets/auth.js"></script>
+    <script src="assets/main.js"></script>
+  </body>
+</html>
