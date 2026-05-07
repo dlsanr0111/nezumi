@@ -35,6 +35,7 @@
       "home.target": "目標日時",
       "home.target.classified": "CLASSIFIED",
       "home.operation": "作戦コード",
+      "home.cta.team": "[ メンバーを見る ]",
 
       "team.label.dossier": "> AGENT_DOSSIER.dat",
       "team.headline": "AGENT DOSSIER",
@@ -123,6 +124,7 @@
       "home.target": "목표 일시",
       "home.target.classified": "CLASSIFIED",
       "home.operation": "작전 코드",
+      "home.cta.team": "[ 팀원 보기 ]",
 
       "team.label.dossier": "> AGENT_DOSSIER.dat",
       "team.headline": "AGENT DOSSIER",

@@ -321,6 +321,28 @@ main.content {
 }
 .complete-banner.hidden { display: none; }
 
+.cta-team {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 12px 22px;
+  border: 1px solid var(--green-dim);
+  color: var(--green);
+  letter-spacing: 0.22em;
+  font-size: 13px;
+  text-decoration: none;
+  background: rgba(155, 191, 63, 0.04);
+  transition: background .15s ease, border-color .15s ease, color .15s ease,
+    box-shadow .15s ease, transform .15s ease;
+}
+.cta-team:hover {
+  background: var(--green);
+  color: #000;
+  border-color: var(--green);
+  box-shadow: 0 0 20px rgba(155, 191, 63, 0.35);
+  transform: translateY(-1px);
+}
+.cta-team:active { transform: translateY(0); }
+
 /* Team page */
 .team-banner {
   width: 100%;

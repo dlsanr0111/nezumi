@@ -1,4 +1,4 @@
 window.NEZUMI_CONFIG = {
-  nextMeeting: null,
+  nextMeeting: "2026-08-20 00:00",
   operationCode: "OP-NEZUMI-07",
 };
