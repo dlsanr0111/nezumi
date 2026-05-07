@@ -24,7 +24,13 @@ html, body {
   font-size: 14px;
   line-height: 1.55;
   min-height: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   letter-spacing: 0.01em;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  touch-action: pan-x pan-y;
 }
 
 a { color: var(--green); text-decoration: none; }
